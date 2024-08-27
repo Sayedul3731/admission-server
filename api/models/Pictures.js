@@ -28,6 +28,6 @@ const picturesSchema = new Schema({
   ],
 });
 
-const Pictures = mongoose.model("Pictures", picturesSchema);
+const Picture = mongoose.model("Picture", picturesSchema);
 
-module.exports = Pictures;
+module.exports = Picture;

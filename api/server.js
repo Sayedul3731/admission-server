@@ -16,12 +16,12 @@ app.use(express.json());
 
 const userRoutes = require("./Routes/userRoutes");
 const collegeRoutes = require("./Routes/collegeRoutes");
-const picturesRoutes = require("./Routes/picturesRoutes");
+const pictureRoutes = require("./Routes/pictureRoutes");
 const researchRoutes = require("./Routes/researchRoutes");
 const candidateRoutes = require("./Routes/candidateRoutes");
 app.use("/api", userRoutes);
 app.use("/api", collegeRoutes);
-app.use("/api", picturesRoutes);
+app.use("/api", pictureRoutes);
 app.use("/api", researchRoutes);
 app.use("/api", candidateRoutes);
 

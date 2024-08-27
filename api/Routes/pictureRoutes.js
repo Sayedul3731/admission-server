@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const Pictures = require("../models/Pictures");
+const Picture = require("../models/Pictures");
 
 router.get("/pictures", async (req, res) => {
   try {
-    const pictures = await Pictures.find();
+    const pictures = await Picture.find();
     console.log(pictures);
     if (!pictures) {
       return res.status(404).json({ message: "No Pictures Found" });
