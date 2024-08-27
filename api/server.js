@@ -4,7 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(
@@ -44,15 +44,15 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 // serverless function
-module.exports = (req, res) => {
-  return new Promise((resolve, reject) => {
-    app(req, res, (err) => {
-      if (err) reject(err);
-      else resolve();
-    });
-  });
-};
+// module.exports = (req, res) => {
+//   return new Promise((resolve, reject) => {
+//     app(req, res, (err) => {
+//       if (err) reject(err);
+//       else resolve();
+//     });
+//   });
+// };
