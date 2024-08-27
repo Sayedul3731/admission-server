@@ -19,7 +19,7 @@ const collegeRoutes = require("./Routes/collegeRoutes");
 const picturesRoutes = require("./Routes/picturesRoutes");
 const researchRoutes = require("./Routes/researchRoutes");
 const candidateRoutes = require("./Routes/candidateRoutes");
-app.use("/api/users", userRoutes);
+app.use("/api", userRoutes);
 app.use("/api", collegeRoutes);
 app.use("/api", picturesRoutes);
 app.use("/api", researchRoutes);
