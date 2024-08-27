@@ -28,7 +28,7 @@ app.use("/api", candidateRoutes);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.URI, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     writeConcern: {
