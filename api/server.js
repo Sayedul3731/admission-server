@@ -22,7 +22,7 @@ const researchRoutes = require("./Routes/researchRoutes");
 const candidateRoutes = require("./Routes/candidateRoutes");
 app.use("/api", userRoutes);
 app.use("/api", collegeRoutes);
-app.use("/api/get", pictureRoutes);
+app.use("/api/get/pictures", pictureRoutes);
 app.use("/api", researchRoutes);
 app.use("/api", candidateRoutes);
 
