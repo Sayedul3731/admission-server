@@ -9,8 +9,8 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    // origin: "https://college-admission-server-nine.vercel.app",
-    origin: "http://localhost:5173",
+    origin: "https://admission-server-blue.vercel.app",
+    // origin: "http://localhost:5173",
   })
 );
 app.use(express.json());
@@ -21,8 +21,8 @@ const pictureRoutes = require("./Routes/pictureRoutes");
 const researchRoutes = require("./Routes/researchRoutes");
 const candidateRoutes = require("./Routes/candidateRoutes");
 app.use("/api/users", userRoutes);
-app.use("/api", collegeRoutes);
-app.use("/api/get/pictures", pictureRoutes);
+app.use("/api/colleges", collegeRoutes);
+app.use("/api/pictures", pictureRoutes);
 app.use("/api", researchRoutes);
 app.use("/api", candidateRoutes);
 

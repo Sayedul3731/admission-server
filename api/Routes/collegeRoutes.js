@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const College = require("../models/College");
 
-router.get("/colleges", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const colleges = await College.find();
     if (!colleges) {
