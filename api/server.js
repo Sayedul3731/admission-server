@@ -4,7 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(
@@ -22,7 +22,7 @@ const researchRoutes = require("./Routes/researchRoutes");
 const candidateRoutes = require("./Routes/candidateRoutes");
 app.use("/api", userRoutes);
 app.use("/api", collegeRoutes);
-app.use("/api", pictureRoutes);
+app.use("/api/get", pictureRoutes);
 app.use("/api", researchRoutes);
 app.use("/api", candidateRoutes);
 
@@ -45,9 +45,9 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 // serverless function
 module.exports = (req, res) => {
   return new Promise((resolve, reject) => {
