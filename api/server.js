@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: "https://college-admission-server-nine.vercel.app/",
-    // origin: "http://localhost:5173/",
+    origin: "https://college-admission-server-nine.vercel.app",
+    // origin: "http://localhost:5173",
   })
 );
 app.use(express.json());
