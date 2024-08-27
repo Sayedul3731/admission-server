@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 
-router.get("/users", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
@@ -15,6 +15,7 @@ router.get("/users", async (req, res) => {
 // @desc    Create a new user
 router.post("/", async (req, res) => {
   const { name, email, password } = req.body;
+  console.log(name, email, password);
   try {
     const newUser = new User({ name, email, password });
     await newUser.save();
